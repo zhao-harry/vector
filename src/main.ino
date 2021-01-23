@@ -60,8 +60,8 @@ bool detect = false; // Launch detection status
 bool gimbal = false; // Gimbal status
 bool eject = false; // Parachute ejection status
 
-void setup() 
-{ 
+void setup()
+{
   Serial.begin(9600);
   Wire.begin();
   xservo.attach(0);
@@ -71,11 +71,10 @@ void setup()
   if(!relay.begin()){
     Serial.print("Inspect relay");
   }
-} 
- 
- 
-void loop() 
-{ 
+}
+
+void loop()
+{
   float ax, ay, az;
   float gx, gy, gz;
   float mx, my, mz;
