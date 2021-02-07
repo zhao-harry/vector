@@ -122,8 +122,8 @@ void loop()
     if(launch) {
       xp = 0.0 - phi;
       yp = 0.0 - the;
-      xi = xp * dt;
-      yi = yp * dt;
+      xi = xi + (xp * dt);
+      yi = yi + (yp * dt);
       xd = (xp - xp_prev) / dt;
       yd = (yp - yp_prev) / dt;
       xpos = xpos + (xp * Kp) + (xi * Ki) + (xd * Kd);
